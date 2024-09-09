@@ -9,6 +9,7 @@ export default defineConfig({
       '/api' : {
         target :  process.env.VITE_BACKEND_URL,
         secure : false,
+        rewrite: (path) => path.replace(/^\/api/, '/api'),
       },
     },
   },
