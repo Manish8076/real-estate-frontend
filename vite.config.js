@@ -6,7 +6,7 @@ export default defineConfig({
   server :{
     proxy : {
       '/api' : {
-        target : 'https://real-estate-backend-one-mu.vercel.app/',
+        target : 'https://real-estate-backend-one-mu.vercel.app',
         secure : false,
       },
     },
