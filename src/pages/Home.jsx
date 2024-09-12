@@ -18,7 +18,7 @@ export default function Home() {
   useEffect(()=>{
     const fetchOfferListings  = async()=>{
       try {
-        const res = await fetch('https://real-estate-backend-livid.vercel.app//api/listing/get?offer=true&limit=4')
+        const res = await fetch('https://real-estate-backend-livid.vercel.app/api/listing/get?offer=true&limit=4')
         const data =  await res.json();
         setOfferListings(data);
         fetchRentListings();
