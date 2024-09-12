@@ -35,7 +35,7 @@ export default function SignUp() {
      }
      setLoading(false)
      setError(null)
-     navigate('https://real-estate-frontend-eta.vercel.app/sign-in')
+     navigate('sign-in')
    } catch (error) {
       setLoading(false);
       setError(error.message);
@@ -61,7 +61,7 @@ export default function SignUp() {
       </form>
       <div className=' flex gap-2 mt-5'>
         <p>Have an account? </p>
-        <Link to={"https://real-estate-frontend-eta.vercel.app/sign-in"}>
+        <Link to={"sign-in"}>
             <span className=' text-blue-700'>Sign In</span>
         </Link>
       </div>
