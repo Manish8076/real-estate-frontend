@@ -51,7 +51,7 @@ export default function Search() {
             setLoading(true);
             setShowMore(false)
             const searchQuery = urlParams.toString();
-            const res = await fetch(`/api/listing/get?${searchQuery}`)
+            const res = await fetch(`https://real-estate-backend-livid.vercel.app/api/listing/get?${searchQuery}`)
             const data = await res.json();
             
             setListings(data);
@@ -113,7 +113,7 @@ export default function Search() {
         const urlParams = new URLSearchParams(location.search);
         urlParams.set('startIndex', startIndex);
         const searchQuerry = urlParams.toString();
-        const res = await fetch(`/api/listing/get?${searchQuerry}`);
+        const res = await fetch(`https://real-estate-backend-livid.vercel.app/api/listing/get?${searchQuerry}`);
         const data = await res.json();
         if(data.length < 9){
             setShowMore(false);
